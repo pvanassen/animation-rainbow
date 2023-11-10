@@ -13,7 +13,7 @@ class Rainbow(private val canvas: Canvas) : Animation<Any> {
     private var pos = -canvas.getHeight()
 
     init {
-        val img = ImageIO.read(javaClass.getResourceAsStream("/rainbow-long.png"))
+        val img = ImageIO.read(javaClass.getResourceAsStream("/rainbow.png"))
         rainbow = if (img.width < canvas.getWidth()) {
             val factor = canvas.getWidth() / img.width.toDouble()
             val scaled =
