@@ -24,12 +24,10 @@ class Rainbow(private val canvas: Canvas) : Animation<Any> {
         } else {
             img
         }
-        println("Rainbow height: ${rainbow.height}")
     }
 
     override fun getFrame(seed: Long, frame: Int, nsPerFrame: Int, helper: Any): ByteArray {
         canvas.setImage(0, pos++, rainbow)
-        println("Helper pos: $pos")
         if (pos > rainbow.height - canvas.getHeight()) {
             pos = -canvas.getHeight()
         }
